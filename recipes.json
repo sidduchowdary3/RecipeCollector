@@ -1,28 +1,28 @@
 {
-    "recipes": [
-        {
-            "id": 1,
-            "name": "Chicken Biryani",
-            "cuisine": "Indian",
-            "prepTime": "30 min"
-        },
-        {
-            "id": 2,
-            "name": "Margherita Pizza",
-            "cuisine": "Italian",
-            "prepTime": "20 min"
-        },
-        {
-            "id": 3,
-            "name": "Chicken Tacos",
-            "cuisine": "Mexican",
-            "prepTime": "25 min"
-        },
-        {
-            "id": 4,
-            "name": "Fried Rice",
-            "cuisine": "Chinese",
-            "prepTime": "20 min"
-        }
-    ]
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Chicken Biryani",
+      "cuisine": "Indian",
+      "prepTime": "30 min"
+    },
+    {
+      "id": 2,
+      "name": "Margherita Pizza",
+      "cuisine": "Italian",
+      "prepTime": "20 min"
+    },
+    {
+      "id": 3,
+      "name": "Chicken Tacos",
+      "cuisine": "Mexican",
+      "prepTime": "25 min"
+    },
+    {
+      "id": 4,
+      "name": "Fried Rice",
+      "cuisine": "Chinese",
+      "prepTime": "20 min"
+    }
+  ]
 }
