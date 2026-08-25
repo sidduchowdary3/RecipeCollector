@@ -1,11 +1,8 @@
 let recipes = [];   
-const API_URL = "http://localhost:5555/recipes";   
-   
-// READ INITIAL JSON DATA   
+const API_URL = "http://localhost:5555/recipes";    
 async function loadRecipes() {   
     const table = document.getElementById("recipeTable");   
-    table.innerHTML = `<tr><td colspan="5">Loading recipes... <span class="loader"></span></td></tr>`;   
-   
+    table.innerHTML = `<tr><td colspan="5">Loading recipes... <span class="loader"></span></td></tr>`;      
     try {   
         const response = await fetch(API_URL);   
         if (!response.ok) {   
@@ -51,7 +48,7 @@ function displayRecipes(recipeList) {
     });   
 }   
    
-// CREATE - ADD RECIPE   
+// CREATE
 document   
     .getElementById("recipeForm")   
     .addEventListener("submit", async function(event) {   
@@ -64,7 +61,6 @@ document
             cuisine: cuisine,   
             prepTime: prepTime   
         };   
-   
         try {   
             const response = await fetch(API_URL, {   
                 method: "POST",   
@@ -86,7 +82,7 @@ document
         }   
     });   
    
-// UPDATE - EDIT RECIPE   
+// UPDATE   
 async function editRecipe(id) {   
     const recipe = recipes.find(   
         recipe => recipe.id === id   
@@ -100,13 +96,11 @@ async function editRecipe(id) {
     if (newPrepTime === null) {   
         return;   
     }   
-   
     const updatedRecipe = {   
         name: newName,   
         cuisine: newCuisine,   
         prepTime: newPrepTime   
     };   
-   
     try {   
         const response = await fetch(`${API_URL}/${id}`, {   
             method: "PATCH",   
@@ -128,11 +122,10 @@ async function editRecipe(id) {
     }   
 }   
    
-// DELETE - DELETE RECIPE   
+// DELETE   
 async function deleteRecipe(id) {   
     const confirmDelete = confirm("Are you sure you want to delete this recipe?");   
     if (!confirmDelete) return;   
-   
     try {   
         const response = await fetch(`${API_URL}/${id}`, {   
             method: "DELETE"   
@@ -147,7 +140,6 @@ async function deleteRecipe(id) {
         console.error(error);   
     }   
 }   
-   
 // SEARCH   
 async function searchRecipes() {   
     const table = document.getElementById("recipeTable");   
@@ -182,7 +174,6 @@ async function searchRecipes() {
         console.error(error);   
     }   
 }   
-   
 // SHOW ALL   
 async function showAllRecipes() {   
     const table = document.getElementById("recipeTable");   
