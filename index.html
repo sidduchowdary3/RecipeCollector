@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 
+    <title>Recipe Collector</title> 
+ 
+    <link rel="stylesheet" href="style.css"> 
+</head> 
+<body> 
+    <h1>RECIPE COLLECTOR</h1> 
+ 
+    <!-- Add Recipe --> 
+    <div class="card"> 
+        <h3>Add a recipe</h3> 
+        <form id="recipeForm"> 
+            <input type="text" id="recipeName" placeholder="Recipe name" required> 
+            <input type="text" id="cuisine" placeholder="Cuisine" required> 
+            <input type="text" id="prepTime" placeholder="Time taken (e.g. 20 min)" required> 
+            <button type="submit">Add Recipe</button> 
+        </form> 
+    </div> 
+ 
+    <!-- Search --> 
+    <div class="card"> 
+        <h3>Search for recipe</h3> 
+        <div id="searchSection"> 
+            <input type="text" id="searchInput" placeholder="Search recipe..."> 
+            <button onclick="searchRecipes()">Search</button> 
+            <button onclick="showAllRecipes()">Show All</button> 
+        </div> 
+    </div> 
+ 
+    <!-- Recipes --> 
+    <h2>Recipes</h2> 
+    <table> 
+        <thead> 
+            <tr> 
+                <th>ID</th> 
+                <th>Name</th> 
+                <th>Cuisine</th> 
+                <th>Time Taken</th> 
+                <th>Actions</th> 
+            </tr> 
+        </thead> 
+        <tbody id="recipeTable"></tbody> 
+    </table> 
+ 
+    <script src="script.js"></script> 
+</body> 
+</html>

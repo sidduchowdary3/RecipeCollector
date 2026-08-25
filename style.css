@@ -1,0 +1,220 @@
+* { 
+    box-sizing: border-box; 
+} 
+ 
+body {   
+    font-family: Arial, sans-serif;   
+    margin: 0;   
+    padding: 30px 40px;   
+    background-color: #f4f6f8;   
+    color: #333;   
+}   
+   
+h1 {   
+    text-align: center;   
+    font-family: Segoe UI;   
+    color: #2f6b3c;   
+    margin-bottom: 30px;   
+    font-size: 36px;
+}   
+ 
+.card { 
+    width: 100%; 
+    max-width: 1100px; 
+    margin: 0 auto 20px; 
+    padding: 24px 25px; 
+    background-color: white; 
+    border-radius: 12px; 
+    box-shadow: 0 3px 12px #ddd; 
+} 
+ 
+.card h3 { 
+    margin: 0 0 18px; 
+    color: #2f6b3c;  
+    font-size: 23px;
+} 
+ 
+#recipeForm {   
+    display: flex;   
+    align-items: center;   
+    gap: 18px;   
+}   
+ 
+#searchSection { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+} 
+   
+input {   
+    width: 275px;   
+    padding: 13px;   
+    margin: 0;   
+    border: 1px solid #ccc;   
+    border-radius: 6px;   
+    outline: none;   
+    font-size: 16px;   
+}   
+   
+input:focus {   
+    border-color: #4d8058;   
+}   
+   
+button {   
+    padding: 13px 18px;   
+    margin: 0;   
+    cursor: pointer;   
+    border: none;   
+    border-radius: 6px;   
+    background-color: #333;   
+    color: white;   
+    font-size: 16px;   
+}   
+   
+button:hover {   
+    opacity: 0.85;   
+}   
+ 
+#recipeForm button { 
+    background-color: #28a745; 
+} 
+ 
+#searchSection button { 
+    background-color: #333; 
+} 
+   
+h2 { 
+    max-width: 1100px; 
+    margin: 30px auto 15px; 
+    color: #2f6b3c;
+    font-size: 25px;
+} 
+   
+table {   
+    width: 100%;   
+    max-width: 1100px; 
+    margin: 0 auto;   
+    border-collapse: collapse;   
+    background-color: white;   
+    box-shadow: 0 3px 12px #ddd;   
+    border-radius: 10px;   
+    overflow: hidden;   
+}   
+   
+th,td {   
+    border-bottom: 1px solid #ddd;   
+    padding: 14px 16px;   
+    text-align: left;   
+    font-size: 15px;
+}   
+   
+th {   
+    background-color: #2f6b3c;   
+    color: white;   
+    font-size: 15px;
+}   
+   
+tr:hover {   
+    background-color: #f5f8f5;   
+}   
+   
+.edit {   
+    background-color: #28a745;   
+}   
+   
+.delete {   
+    background-color: #dc3545;   
+}   
+   
+.loader {  
+    display: inline-block;  
+    width: 14px;  
+    height: 14px;  
+    margin-left: 8px;  
+    border: 2px solid #ccc;  
+    border-top: 2px solid #333;  
+    border-radius: 50%;  
+    animation: spin 0.8s linear infinite;  
+    vertical-align: middle;  
+}  
+  
+@keyframes spin {  
+    from {  
+        transform: rotate(0deg);  
+    }  
+  
+    to {  
+        transform: rotate(360deg);  
+    }  
+}  
+   
+@media (max-width: 768px) {   
+    body {   
+        margin: 0;   
+        padding: 20px;   
+    }   
+ 
+    .card { 
+        width: 100%; 
+    } 
+   
+    #recipeForm {   
+        flex-wrap: wrap;   
+    }   
+   
+    input {   
+        flex: 1;   
+        min-width: 180px;   
+    }   
+ 
+    #searchSection { 
+        flex-wrap: wrap; 
+    } 
+   
+    table {   
+        display: block;   
+        overflow-x: auto;   
+    }   
+}   
+   
+@media (max-width: 480px) {   
+    body {   
+        margin: 0;   
+        padding: 12px;   
+    }   
+   
+    h1 {   
+        font-size: 28px;   
+        margin-bottom: 25px;
+    }   
+   
+    .card { 
+        padding: 18px; 
+    } 
+ 
+    .card h3 {
+        font-size: 20px;
+    }
+
+    #recipeForm {   
+        flex-direction: column;   
+        align-items: stretch;   
+    }   
+ 
+    #searchSection { 
+        flex-direction: column; 
+        align-items: stretch; 
+    } 
+   
+    input {   
+        width: 100%;   
+    }   
+   
+    button {   
+        width: 100%;   
+    }   
+   
+    th,td {   
+        padding: 10px;   
+    }   
+}
